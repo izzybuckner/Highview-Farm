@@ -26,3 +26,15 @@ window.addEventListener(
 
 const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
+
+// Guest notes open the visitor's email app, addressed to the farm.
+const INQUIRY_EMAIL = "";
+
+document.getElementById("inquire-form")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const name = String(data.get("name") || "").trim();
+  const subject = `High View Farm note from ${name}`;
+  const body = `${data.get("message")}\n\n${name}\n${data.get("email")}`;
+  window.location.href = `mailto:${INQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+});

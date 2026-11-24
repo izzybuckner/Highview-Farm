@@ -607,7 +607,7 @@ h2 {
 
 .gathering {
   position: relative;
-  min-height: 88vh;
+  min-height: 80vh;
   display: grid;
   align-items: end;
   color: var(--cream);
@@ -634,8 +634,8 @@ h2 {
 .gathering-copy {
   position: relative;
   z-index: 1;
-  max-width: 34rem;
-  padding: 0 6vw 5rem;
+  max-width: 40rem;
+  padding: 0 6vw 4rem;
 }
 
 .gathering-copy .kicker {
@@ -644,9 +644,81 @@ h2 {
 
 .gathering-copy p:not(.kicker) {
   font-family: var(--serif);
-  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
-  line-height: 1.35;
-  margin: 0 0 1.6rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.inquire {
+  background: var(--forest);
+  color: var(--cream);
+}
+
+.inquire .kicker {
+  color: var(--gold-soft);
+}
+
+.inquire p {
+  color: rgba(244, 239, 230, 0.86);
+  max-width: 26rem;
+  text-wrap: pretty;
+}
+
+.inquire-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.inquire-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.inquire-form label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.inquire-form .full {
+  grid-column: 1 / -1;
+}
+
+.inquire-form span {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.inquire-form input,
+.inquire-form textarea {
+  font: inherit;
+  color: var(--cream);
+  background: rgba(244, 239, 230, 0.06);
+  border: 1px solid rgba(244, 239, 230, 0.25);
+  padding: 0.8rem 0.9rem;
+  border-radius: 0;
+}
+
+.inquire-form textarea::placeholder {
+  color: rgba(244, 239, 230, 0.5);
+}
+
+.inquire-form input:focus,
+.inquire-form textarea:focus {
+  outline: none;
+  border-color: var(--gold-soft);
+}
+
+.inquire-form button {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--sans);
 }
 
 .site-footer a {
@@ -692,7 +764,17 @@ h2 {
   }
 
   .gathering-copy {
-    padding: 2.6rem 6vw 3.2rem;
+    padding: 2.4rem 6vw 0.6rem;
+  }
+
+  .inquire {
+    padding-top: 1.6rem;
+  }
+
+  .inquire-inner,
+  .inquire-form {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
   }
 
   .site-footer {
