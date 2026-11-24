@@ -28,7 +28,7 @@ const year = document.getElementById("year");
 if (year) year.textContent = String(new Date().getFullYear());
 
 // Guest notes open the visitor's email app, addressed to the farm.
-const INQUIRY_EMAIL = "";
+const INQUIRY_EMAIL = "hello@highview.farm";
 
 document.getElementById("inquire-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
