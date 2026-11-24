@@ -660,16 +660,16 @@ h2 {
 }
 
 .inquire {
-  background: var(--forest);
-  color: var(--cream);
+  background: var(--cream);
+  color: var(--ink);
 }
 
-.inquire .kicker {
-  color: var(--gold-soft);
+.inquire h2 {
+  text-wrap: balance;
 }
 
 .inquire p {
-  color: rgba(244, 239, 230, 0.86);
+  color: var(--muted);
   max-width: 26rem;
   text-wrap: pretty;
 }
@@ -700,27 +700,27 @@ h2 {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold-soft);
+  color: var(--gold);
 }
 
 .inquire-form input,
 .inquire-form textarea {
   font: inherit;
-  color: var(--cream);
-  background: rgba(244, 239, 230, 0.06);
-  border: 1px solid rgba(244, 239, 230, 0.25);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
   padding: 0.8rem 0.9rem;
   border-radius: 0;
 }
 
 .inquire-form textarea::placeholder {
-  color: rgba(244, 239, 230, 0.5);
+  color: rgba(107, 97, 86, 0.7);
 }
 
 .inquire-form input:focus,
 .inquire-form textarea:focus {
   outline: none;
-  border-color: var(--gold-soft);
+  border-color: var(--gold);
 }
 
 .inquire-form button {
@@ -759,7 +759,16 @@ h2 {
   .gathering {
     display: block;
     min-height: 0;
-    background: var(--forest);
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .gathering-copy {
+    text-shadow: none;
+  }
+
+  .gathering-copy .kicker {
+    color: var(--gold);
   }
 
   .gathering::after {
