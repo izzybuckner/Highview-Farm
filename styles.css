@@ -547,6 +547,10 @@ h2 {
 }
 
 /* Home page */
+.split img.aerial {
+  object-position: 62% 50%;
+}
+
 .section-head {
   display: flex;
   justify-content: space-between;
